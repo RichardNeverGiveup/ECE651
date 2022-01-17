@@ -1,0 +1,29 @@
+npx create-react-app quickbuy
+cd quickbuy
+npm start
+npm install koa@2.3.0 -S
+npm install koa-swig -S
+npm install koa-static-server -S
+npm install react react-dom -S
+npm install webpack -D
+npm install babel-loader babel-core babel-preset-react babel-preset-es2015 -D
+npm install webpack -g
+npm init
+npm install webpack --save-dev
+npm i -g webpack-cli
+
+npm install --save-dev babel-loader
+npm install --save-dev style-loader
+npm install --save-dev css-loader
+npm install --save-dev sass-loader
+npm uninstall babel
+npm install --save-dev babel-cli
+npm install style-loader css-loader sass-loader node-sass -D
+npm install babel-preset-es2015 --save-dev
+npm install --save-dev babel-preset-react
+
+npm i node-sass -D
+npm install sass-loader@6.07 --save-dev
+npm install extract-text-webpack-plugin -D
+npm install webpack-dev-server -D
+npm install html-webpack-plugin -D 
