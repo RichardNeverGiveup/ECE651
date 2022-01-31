@@ -1,12 +1,9 @@
 import React from 'react';
 import { Row, Col, Input, Menu, Dropdown, Button } from 'antd';
-// import AddUser from '../../components/login/AddUser';
+import { Link } from 'react-router-dom';
 
 const { Search } = Input;
-
-
 class Header extends React.Component {
-
 
     constructor(props) {
         super(props);
@@ -15,10 +12,8 @@ class Header extends React.Component {
         this.onSearch = this.onSearch.bind(this);
       }
 
-
     handleSignIn() {
-        console.log('111');
-        // this.props.history.push('/addUser')
+        this.props.history.push('/login')
     }
 
     handleNewUser() {
@@ -39,7 +34,8 @@ class Header extends React.Component {
                 </Menu.Item>
                 <Menu.Item key="1">
                     <Button type="link" block onClick={this.handleNewUser}>
-                        New customer? Start here.
+                        {/* New customer? Start here. */}
+                        <Link to="/login">New customer? Start here.</Link>
                     </Button>
                 </Menu.Item>
             </Menu>

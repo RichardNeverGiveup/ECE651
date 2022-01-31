@@ -6,29 +6,29 @@ class Content extends React.Component {
     render() {
         return (
             <div>
-            <nav style={navStyle}>Some information about foods</nav>
-              <Carousel autoplay>
-                <div>
-                  <h3 style={contentStyle}>
-                    <img src="image/pet.jpg" alt='logo'></img>
-                  </h3>
-                </div>
-                <div>
-                  <h3 style={contentStyle}>
-                  <img src="image/newyear.jpg" alt='logo'></img>
-                  </h3>
-                </div>
-                <div>
-                  <h3 style={contentStyle}>
-                  <img src="image/3.jpg" alt='logo'></img>
-                  </h3>
-                </div>
-                <div>
-                  <h3 style={contentStyle}>
-                  <img src="image/4.jpg" alt='logo'></img>
-                  </h3>
-                </div>
-              </Carousel>
+              {/* <nav style={navStyle}>Some information about foods</nav>
+                <Carousel autoplay>
+                  <div>
+                    <h3 style={contentStyle}>
+                      <img src="image/pet.jpg" alt='logo'></img>
+                    </h3>
+                  </div>
+                  <div>
+                    <h3 style={contentStyle}>
+                    <img src="image/newyear.jpg" alt='logo'></img>
+                    </h3>
+                  </div>
+                  <div>
+                    <h3 style={contentStyle}>
+                    <img src="image/3.jpg" alt='logo'></img>
+                    </h3>
+                  </div>
+                  <div>
+                    <h3 style={contentStyle}>
+                    <img src="image/4.jpg" alt='logo'></img>
+                    </h3>
+                  </div>
+                </Carousel> */}
             </div>
         );
     }
