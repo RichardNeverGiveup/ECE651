@@ -1,33 +1,51 @@
 import React from 'react';
 import "./index.css"
 
-import { apiAddUser } from '../../request/api';
+import { apiAddUser, apiLoginUser } from '../../request/api';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { Row, Col } from 'antd';
-
-class Login extends React.Component {
-
-  formRef = React.createRef()
-
-  onFinish = values => {
-
-    const {username, password} = values
-
-    apiAddUser({username, password}).then((res) => {
-      console.log('res_______', res);
-    }, err => {
-      console.log('err', err)
-    })
-  }
+import Cookies from 'js-cookie';
 
 
-  onFinishFailed = errorInfo => {
+export default function Login() {
+
+  const { state } = useLocation();
+  let navigate = useNavigate();
+
+  const onFinish = (values) => {
+
+    const {username, password} = values;
+
+    if(state.status === 1) {
+      //login
+      apiLoginUser({username, password}).then((res) => {
+        // console.log('reslogin_______', res);
+        if(res.data.flag === true) {
+          navigate("/", {state: {username: username}});
+          Cookies.set("user", username);
+        }
+      }, err => {
+        console.log('err', err)
+      })
+    } else if (state.status === 0) {
+      // create
+      apiAddUser({username, password}).then((res) => {
+        console.log('rescreate_______', res);
+      }, err => {
+        console.log('err', err)
+      })
+    }
+    
+  };
+
+  const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
-  }
+  };
 
-  render() {
-      return (
+  return (
+    <div>
           <div className="register">
             <Row>
               <Col flex="auto"></Col>
@@ -36,14 +54,13 @@ class Login extends React.Component {
                   <div className="register_header">WATERLOO</div>
                   <div className="register_form">
                     <Form
-                      ref={this.formRef}
                       name="basic"
                       labelCol={{ span: 8 }}
                       wrapperCol={{ span: 16 }}
                       initialValues={{ remember: true }}
                       autoComplete="off"
-                      onFinish={this.onFinish}
-                      onFinishFailed={this.onFinishFailed}
+                      onFinish={onFinish}
+                      onFinishFailed={onFinishFailed}
 
                     >
                       <Form.Item
@@ -53,7 +70,22 @@ class Login extends React.Component {
                       >
                         <Input />
                       </Form.Item>
-
+                      {/* <Form.Item
+                        name="username"
+                        label="E-mail"
+                        rules={[
+                          {
+                            type: 'email',
+                            message: 'The input is not valid E-mail!',
+                          },
+                          {
+                            required: true,
+                            message: 'Please input your E-mail!',
+                          },
+                        ]}
+                      >
+                        <Input />
+                      </Form.Item> */}
                       <Form.Item
                         label="Password"
                         name="password"
@@ -62,13 +94,14 @@ class Login extends React.Component {
                         <Input.Password />
                       </Form.Item>
 
-                      <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 4, span: 20 }}>
+                      {/* <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 4, span: 20 }}>
                         <Checkbox>Remember me</Checkbox>
-                      </Form.Item>
+                      </Form.Item> */}
 
                       <Form.Item wrapperCol={{ offset: 4, span: 20 }}>
                         <Button type="primary" htmlType="submit">
-                          Submit
+                          <p className={state.status === 1 ? 'showSubmit' : 'hiddenSubmit'}>Submit</p>
+                          <p className={state.status === 0 ? 'showSubmit' : 'hiddenSubmit'}>Register</p>
                         </Button>
                       </Form.Item>
                     </Form>
@@ -78,9 +111,6 @@ class Login extends React.Component {
               <Col flex="auto"></Col>
             </Row>
           </div>
-      );
-  }
+    </div>
+  )
 }
-
-
-export default Login;
