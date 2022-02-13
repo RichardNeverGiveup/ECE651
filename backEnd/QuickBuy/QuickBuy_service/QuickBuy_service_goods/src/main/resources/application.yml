@@ -6,7 +6,7 @@ spring:
     name: goods
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://120.79.210.169:3306/changgou
+    url: jdbc:mysql://120.79.210.169:3306/ecommerce
     username: ECE651
     password: 123456
 
@@ -29,3 +29,6 @@ hystrix:
           enabled: true
         isolation:
           strategy: SEMAPHORE
+
+workerID: 0
+datacenterID: 0

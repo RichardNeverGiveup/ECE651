@@ -2,9 +2,11 @@ package com.QuickBuy.service.goods.service.impl;
 
 import com.QuickBuy.goods.pojo.Brand;
 import com.QuickBuy.service.goods.dao.BrandMapper;
+
+//import com.github.pagehelper.Page;
+//import com.github.pagehelper.PageHelper;
+
 import com.QuickBuy.service.goods.service.BrandService;
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -75,7 +77,9 @@ public class BrandServiceImpl implements BrandService {
         return brandMapper.selectByExample(example);
     }
 
-    @Override
+
+   /* @Override
+
     public Page<Brand> findPage(int page, int size) {
 
         PageHelper.startPage(page, size);
@@ -108,4 +112,6 @@ public class BrandServiceImpl implements BrandService {
 
         return (Page<Brand>)brandMapper.selectByExample(example);
     }
+
+    }*/
 }
