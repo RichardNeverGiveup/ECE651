@@ -38,8 +38,14 @@ public class ProductServiceImpl implements ProductService {
         Example.Criteria criteria = example.createCriteria();
         if(searchMap != null){
 
+            //Search by category_id
             if(searchMap.get("category_id") != null && !"".equals(searchMap.get("category_id"))){
                 criteria.andEqualTo("category_id", searchMap.get(("category_id")));
+            }
+
+            //Search by name(like)
+            if(searchMap.get("name") != null && !"".equals(searchMap.get("name"))){
+                criteria.andLike("name", "%" + searchMap.get("name") + "%");
             }
         }
 
