@@ -26,3 +26,15 @@
 .hiddenSubmit {
     display: none;
 }
+
+.passwordNotice {
+    font-size: 12px;
+}
+
+.notice {
+    padding-left: 10px;
+}
+
+.notice_user {
+    padding-left: 8px;
+}
