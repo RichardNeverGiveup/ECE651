@@ -1,16 +1,12 @@
 package com.QuickBuy.service.goods.service.impl;
 
-import com.QuickBuy.goods.pojo.Brand;
 import com.QuickBuy.goods.pojo.UserLogin;
 import com.QuickBuy.service.goods.dao.UserLoginMapper;
 import com.QuickBuy.service.goods.service.UserLoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import tk.mybatis.mapper.entity.Example;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @Service

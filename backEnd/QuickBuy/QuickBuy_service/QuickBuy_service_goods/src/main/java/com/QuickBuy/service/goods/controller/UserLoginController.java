@@ -1,17 +1,12 @@
 package com.QuickBuy.service.goods.controller;
 
-import com.QuickBuy.common.pojo.PageResult;
 import com.QuickBuy.common.pojo.Result;
 import com.QuickBuy.common.pojo.StatusCode;
-import com.QuickBuy.goods.pojo.Brand;
 import com.QuickBuy.goods.pojo.UserLogin;
 import com.QuickBuy.service.goods.service.UserLoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

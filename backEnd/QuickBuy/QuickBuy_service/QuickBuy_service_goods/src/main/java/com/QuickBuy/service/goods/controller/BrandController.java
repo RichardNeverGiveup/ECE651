@@ -1,6 +1,5 @@
 package com.QuickBuy.service.goods.controller;
 
-import com.QuickBuy.common.pojo.PageResult;
 import com.QuickBuy.common.pojo.Result;
 import com.QuickBuy.common.pojo.StatusCode;
 import com.QuickBuy.goods.pojo.Brand;
@@ -57,29 +56,27 @@ public class BrandController {
     //品牌条件查询
     @GetMapping("/search")
     public Result<List<Brand>> search(@RequestParam Map<String, Object> searchMap){
-       List<Brand> list = brandService.list(searchMap);
-       return new Result<>(true, StatusCode.OK, "Query OK.", list);
+        List<Brand> list = brandService.list(searchMap);
+        return new Result<>(true, StatusCode.OK, "Query OK.", list);
     }
 
-    //品牌分页查询
-    //@GetMapping("/search/{page}/{size}")
-    //public Result findPage(@PathVariable("page") int page, @PathVariable("size") int size){
-    //    Page<Brand> pageInfo = brandService.findPage(page,size);
-    //    PageResult<Brand> pageResult = new PageResult<>(PageInfo.EMPTY.getTotal(), pageInfo.getResult());
-    //    return new Result<>(true, StatusCode.OK, "Query OK", pageResult);
-    //}
+/*    品牌分页查询
+    @GetMapping("/search/{page}/{size}")
+    public Result findPage(@PathVariable("page") int page, @PathVariable("size") int size){
+        Page<Brand> pageInfo = brandService.findPage(page,size);
+        PageResult<Brand> pageResult = new PageResult<>(PageInfo.EMPTY.getTotal(), pageInfo.getResult());
+        return new Result<>(true, StatusCode.OK, "Query OK", pageResult);
+    }
 
-    //品牌分页+查询
-   /* @GetMapping("/searchPage/{page}/{size}")
+    品牌分页+查询
+   @GetMapping("/searchPage/{page}/{size}")
     public Result findPage(@RequestParam Map<String, Object> searchMap, @PathVariable("page") int page, @PathVariable("size") int size){
-
         //测试手动添加异常
 //        int i = 1 / 0;
-
         Page<Brand> pageInfo = brandService.findPage(searchMap, page, size);
         PageResult<Brand> pageResult = new PageResult<>(pageInfo.getTotal(), pageInfo.getResult());
         return new Result<>(true, StatusCode.OK, "Query OK.", pageResult);
-    }*/
-
+    }
+*/
 
 }

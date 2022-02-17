@@ -1,7 +1,6 @@
 package com.QuickBuy.service.goods.dao;
 
 import com.QuickBuy.goods.pojo.UserLogin;
-import org.apache.catalina.User;
 import org.apache.ibatis.annotations.Update;
 import tk.mybatis.mapper.common.Mapper;
 
