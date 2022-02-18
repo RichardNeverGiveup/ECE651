@@ -15,4 +15,7 @@ public interface ProductService {
 
     //按categoryID调出对应的product
     List<Product> findByCat(Map<String, Object> searchMap);
+
+    //按照name模糊查询product
+    List<Product> findByName(Map<String, Object> searchMap);
 }
