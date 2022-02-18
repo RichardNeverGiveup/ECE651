@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/QuickBuy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_common/QuickBuy_common.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_common_db/QuickBuy_common_db.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_eureka/QuickBuy_eureka.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_gateway/QuickBuy_gateway.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QucikBuy_service_order/QucikBuy_service_order.iml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QucikBuy_service_order/QucikBuy_service_order.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/QuickBuy_service_goods.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_goods_api/QuickBuy_service_goods_api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/QuickBuy_service_order_api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Log.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/OrderLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Preferential.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/Preferential.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnCause.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnCause.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnOrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/target/classes/com/QuickBuy/order/pojo/ReturnOrderItem.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="25GE46nWWB7Fvb7T7gaHCBjOF5o" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="RunManager" selected="Spring Boot.GoodsApplication">
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="QuickBuy_eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.eureka.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="QuickBuy_service_goods" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.service.goods.GoodsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="QuickBuy_service_order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.Order.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.OrderApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="" />
+      <created>1645144830319</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645144830319</updated>
+      <workItem from="1645144831583" duration="18000" />
+      <workItem from="1645145411264" duration="644000" />
+      <workItem from="1645146461243" duration="198000" />
+      <workItem from="1645146683105" duration="359000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
