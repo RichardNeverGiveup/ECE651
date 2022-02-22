@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="QuickBuy_common_db" />
+        <module name="QuickBuy_service_order" />
+        <module name="QuickBuy_common" />
+        <module name="QuickBuy_gateway" />
+        <module name="QuickBuy_service_goods_api" />
+        <module name="QuickBuy_eureka" />
+        <module name="QuickBuy_service_goods" />
+        <module name="QuickBuy_service_order_api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="QuickBuy" target="17" />
+      <module name="QuickBuy_common" target="17" />
+      <module name="QuickBuy_common_db" target="17" />
+      <module name="QuickBuy_eureka" target="17" />
+      <module name="QuickBuy_gateway" target="17" />
+      <module name="QuickBuy_service" target="17" />
+      <module name="QuickBuy_service_api" target="17" />
+      <module name="QuickBuy_service_goods" target="17" />
+      <module name="QuickBuy_service_goods_api" target="17" />
+      <module name="QuickBuy_service_order" target="17" />
+      <module name="QuickBuy_service_order_api" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="QuickBuy_common" options="-parameters" />
+      <module name="QuickBuy_common_db" options="-parameters" />
+      <module name="QuickBuy_eureka" options="-parameters" />
+      <module name="QuickBuy_gateway" options="-parameters" />
+      <module name="QuickBuy_service_goods" options="-parameters" />
+      <module name="QuickBuy_service_goods_api" options="-parameters" />
+      <module name="QuickBuy_service_order" options="-parameters" />
+      <module name="QuickBuy_service_order_api" options="-parameters" />
+    </option>
+  </component>
+</project>

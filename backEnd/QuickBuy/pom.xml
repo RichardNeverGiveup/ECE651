@@ -10,6 +10,8 @@
         <module>QuickBuy_service_api</module>
         <module>QuickBuy_service</module>
         <module>QuickBuy_gateway</module>
+        <module>QuickBuy_service/QucikBuy_service_order</module>
+        <module>QuickBuy_service_api/QuickBuy_service_order_api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
