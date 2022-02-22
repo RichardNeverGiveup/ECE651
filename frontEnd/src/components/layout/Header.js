@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Input, Menu, Dropdown, Button } from 'antd';
 import { Link } from 'react-router-dom';
 // import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import { createGenerateClassName } from '@material-ui/core';
 
 const { Search } = Input;
 
@@ -26,9 +27,23 @@ let username = Cookies.get("user");
 
 export default function Header()  {
 
-    // let [userStatus, setUserStatus] = useState(username);
+    // const [name, setName] = useState("");
+    // setName(Cookies.get("user"));
+    // useEffect(() => {
+    //     username = Cookies.get("user");
+    //     console.log('username', Cookies.get("user"))
+    // });
 
-    const [login, setLogin] = useState(false);
+
+    // let [data, setData] = useState({name: ""});
+
+    // useEffect(() => {
+    //     // username = Cookies.get("user");
+    //     setData(Cookies.get("user"));
+    //     console.log('username', Cookies.get("user"))
+    // });
+
+    // const [login, setLogin] = useState(false);
 
     // setLogin(username);
 
@@ -46,19 +61,20 @@ export default function Header()  {
             <Col flex={2}>
                 <Row justify="end">
                     <Col span={10}>
+                        <span>{username}</span>
                         {/* {
                             login ?  <Dropdown overlay={menu} placement="bottomLeft" arrow> <span>Hello, Sign in</span> </Dropdown> :
                             <span>Hello,</span> && username 
                         } */}
-                        {
-                            !username &&
+                        {/* {
+                            !name &&
                             <Dropdown overlay={menu} placement="bottomLeft" arrow>
                                 <span>Hello, Sign in</span>
                             </Dropdown>
                         }
                         {
-                            <span>Hello,</span> && username 
-                        }
+                            <span>Hello,</span> && name 
+                        } */}
                     </Col>
                     <Col span={6}>Orders</Col>
                     <Col span={4}>Cart</Col>

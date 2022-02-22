@@ -12,14 +12,12 @@ import { Row, Col } from 'antd';
 import Cookies from 'js-cookie';
 
 
-export default function Login() {
+export default function Login({Login}) {
 
   const { state } = useLocation();
   let navigate = useNavigate();
 
   // let [alertStatus, setAlertStatus] = useState(true);
-
-
   const onFinish = (values) => {
 
     const {username, password} = values;
@@ -29,8 +27,10 @@ export default function Login() {
       apiLoginUser({username, password}).then((res) => {
         if(res.data.flag === true) {
           message.success('Success login!');
-          navigate("/", {state: {username: username}});
+          // navigate("/", {state: {username: username}});
           Cookies.set("user", username);
+        } else {
+          message.error('Failed login!');
         }
       }, err => {
         console.log('err', err)
@@ -43,10 +43,13 @@ export default function Login() {
 
       if(isValidUser) {
         apiAddUser({username, password}).then((res) => {
-          // console.log('rescreate_______', res);
-          message.success('Success created!');
-          navigate("/", {state: {username: username}});
-          Cookies.set("user", username);
+          if(res.data.flag === false) {
+            message.error('Create failed!');
+          } else {
+            message.success('Success created!');
+            Cookies.set("user", username);
+            navigate("/", {state: {username: username}});
+          }
         }, err => {
           message.error('Error: failed created!');
           console.log('err', err)
@@ -67,10 +70,9 @@ export default function Login() {
     Password must contain at least one digit [0-9].
     Password must contain at least one lowercase Latin character [a-z].
     Password must contain at least one uppercase Latin character [A-Z].
-    Password must contain at least one special character like ! @ # & ( ).
+    Password must contain at least one special character like ! @ # $ % ^ & *
     Password must contain a length of at least 8 characters and a maximum of 20 characters.
     */
-
 
     if(username.length < 4 || username.length > 8) {
       return false;
@@ -78,6 +80,7 @@ export default function Login() {
 
     let regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
     let valid = password.match(regularExpression);
+
 
     return valid == null ? false : true;
 
@@ -135,7 +138,7 @@ export default function Login() {
                      </Space>
 
                       <Form.Item wrapperCol={{ offset: 4, span: 20 }}>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" >
                           <p className={state.status === 1 ? 'showSubmit' : 'hiddenSubmit'}>Submit</p>
                           <p className={state.status === 0 ? 'showSubmit' : 'hiddenSubmit'}>Register</p>
                         </Button>
