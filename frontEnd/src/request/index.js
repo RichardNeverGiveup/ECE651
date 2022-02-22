@@ -3,8 +3,8 @@ import axios from 'axios';
 import { message } from 'antd'
 
 const service = axios.create({
-  // baseURL: 'http://192.168.1.3:9011',
-  baseURL: 'http://10.16.3.243:9011/',
+  baseURL: 'http://192.168.1.3:9011/',
+  //baseURL: 'http://10.16.3.243:9011/',
   timeout: 5000,
   headers:{"Content-Type":"application/json"},
 });

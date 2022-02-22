@@ -1,0 +1,5 @@
+@import '~antd/dist/antd.css';
+
+.ant-card-meta-title {
+    white-space: pre-line;
+  }
