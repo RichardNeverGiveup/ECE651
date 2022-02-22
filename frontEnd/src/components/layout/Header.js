@@ -3,7 +3,6 @@ import { Row, Col, Input, Menu, Dropdown, Button } from 'antd';
 import { Link } from 'react-router-dom';
 // import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { createGenerateClassName } from '@material-ui/core';
 
 const { Search } = Input;
 
@@ -23,29 +22,16 @@ const menu = (
     </Menu>
 )
 
-let username = Cookies.get("user");
+export default function Header({navigation, route})  {
 
-export default function Header()  {
-
-    // const [name, setName] = useState("");
-    // setName(Cookies.get("user"));
-    // useEffect(() => {
-    //     username = Cookies.get("user");
-    //     console.log('username', Cookies.get("user"))
-    // });
-
-
-    // let [data, setData] = useState({name: ""});
-
-    // useEffect(() => {
-    //     // username = Cookies.get("user");
-    //     setData(Cookies.get("user"));
-    //     console.log('username', Cookies.get("user"))
-    // });
-
-    // const [login, setLogin] = useState(false);
-
-    // setLogin(username);
+    const [ name, setName ] = useState()
+    useEffect(() => {
+        console.log("route", route);
+        console.log('username', Cookies.get("user"))
+        if(Cookies.get("user")) {
+            setName(Cookies.get("user"))
+        }
+    });
 
     const onSearch = (value) => {
         console.log(value);
@@ -61,20 +47,15 @@ export default function Header()  {
             <Col flex={2}>
                 <Row justify="end">
                     <Col span={10}>
-                        <span>{username}</span>
-                        {/* {
-                            login ?  <Dropdown overlay={menu} placement="bottomLeft" arrow> <span>Hello, Sign in</span> </Dropdown> :
-                            <span>Hello,</span> && username 
-                        } */}
-                        {/* {
-                            !name &&
-                            <Dropdown overlay={menu} placement="bottomLeft" arrow>
-                                <span>Hello, Sign in</span>
-                            </Dropdown>
+                        {
+                            !name && 
+                        <Dropdown overlay={menu} placement="bottomLeft" arrow>
+                            <span>Hello, Sign in</span>
+                        </Dropdown>
                         }
                         {
-                            <span>Hello,</span> && name 
-                        } */}
+                            <span>Hello, {name}</span>
+                        }
                     </Col>
                     <Col span={6}>Orders</Col>
                     <Col span={4}>Cart</Col>

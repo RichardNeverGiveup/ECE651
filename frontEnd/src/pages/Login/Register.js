@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./index.css"
 
 
@@ -17,7 +17,6 @@ export default function Login({Login}) {
   const { state } = useLocation();
   let navigate = useNavigate();
 
-  // let [alertStatus, setAlertStatus] = useState(true);
   const onFinish = (values) => {
 
     const {username, password} = values;
@@ -27,8 +26,8 @@ export default function Login({Login}) {
       apiLoginUser({username, password}).then((res) => {
         if(res.data.flag === true) {
           message.success('Success login!');
-          // navigate("/", {state: {username: username}});
           Cookies.set("user", username);
+          navigate("/", {state: {username: username}});
         } else {
           message.error('Failed login!');
         }
@@ -38,8 +37,6 @@ export default function Login({Login}) {
     } else if (state.status === 0) {
       const isValidUser = checkValidUser(username, password);
       console.log('isValidUser', isValidUser)
-
-      // setAlertStatus(isValidUser);
 
       if(isValidUser) {
         apiAddUser({username, password}).then((res) => {
