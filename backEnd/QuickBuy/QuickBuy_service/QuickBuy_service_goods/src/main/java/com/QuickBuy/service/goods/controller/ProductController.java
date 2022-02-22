@@ -35,4 +35,10 @@ public class ProductController {
         List<Product> productList = productService.findByCat(searchMap);
         return new Result<>(true, StatusCode.OK, "Query OK", productList);
     }
+
+    @GetMapping("/name")
+    public Result<List<Product>> findByName(@RequestParam Map<String, Object> searchMap){
+        List<Product> productList = productService.findByName(searchMap);
+        return new Result<>(true, StatusCode.OK, "Query OK", productList);
+    }
 }

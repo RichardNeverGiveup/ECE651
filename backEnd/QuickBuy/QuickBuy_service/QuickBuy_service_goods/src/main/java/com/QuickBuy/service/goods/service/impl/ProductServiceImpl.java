@@ -43,6 +43,18 @@ public class ProductServiceImpl implements ProductService {
                 criteria.andEqualTo("category_id", searchMap.get(("category_id")));
             }
 
+        }
+
+        return productMapper.selectByExample(example);
+    }
+
+    @Override
+    public List<Product> findByName(Map<String, Object> searchMap) {
+        Example example = new Example(Product.class);
+
+        Example.Criteria criteria = example.createCriteria();
+        if(searchMap != null){
+
             //Search by name(like)
             if(searchMap.get("name") != null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name", "%" + searchMap.get("name") + "%");
