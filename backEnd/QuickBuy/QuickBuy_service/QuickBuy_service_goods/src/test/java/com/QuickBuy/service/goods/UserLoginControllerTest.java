@@ -16,11 +16,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-/**
- * @author Ruilin Cheng
- * @create 2022-02-23 13:36
- */
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserLoginControllerTest {

@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Sider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Sider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/test/java/com/QuickBuy/service/goods/GoodsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/test/java/com/QuickBuy/service/goods/GoodsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/test/java/com/QuickBuy/service/goods/UserLoginControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/test/java/com/QuickBuy/service/goods/UserLoginControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +55,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.74367815" />
   </component>
-  <component name="RunManager" selected="Application.GoodsApplication">
+  <component name="RunManager" selected="JUnit.UserLoginControllerTest">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.QuickBuy.eureka.EurekaApplication" />
       <module name="QuickBuy_eureka" />
@@ -93,6 +95,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GoodsApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuickBuy_service_goods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QuickBuy.service.goods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.QuickBuy.service.goods" />
+      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.service.goods.GoodsApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserLoginControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QuickBuy_service_goods" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.QuickBuy.service.goods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.QuickBuy.service.goods" />
+      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.service.goods.UserLoginControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="QuickBuy_eureka" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.eureka.EurekaApplication" />
@@ -107,18 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="QuickBuy_service_order" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.Order.OrderApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GoodsApplication" />
+        <item itemvalue="JUnit.UserLoginControllerTest" />
         <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.GoodsApplication" />
         <item itemvalue="Application.EurekaApplication" />
+        <item itemvalue="JUnit.GoodsApplicationTests" />
       </list>
     </recent_temporary>
   </component>

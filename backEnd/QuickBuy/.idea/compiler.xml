@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="QuickBuy_common_db" />
         <module name="QuickBuy_service_order" />
-        <module name="QuickBuy_common" />
+        <module name="QuickBuy_common_db" />
         <module name="QuickBuy_gateway" />
+        <module name="QuickBuy_common" />
         <module name="QuickBuy_service_goods_api" />
         <module name="QuickBuy_eureka" />
         <module name="QuickBuy_service_goods" />
