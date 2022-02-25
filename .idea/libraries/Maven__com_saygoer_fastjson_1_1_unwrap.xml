@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.saygoer:fastjson:1.1-unwrap">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/saygoer/fastjson/1.1-unwrap/fastjson-1.1-unwrap.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/saygoer/fastjson/1.1-unwrap/fastjson-1.1-unwrap-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/saygoer/fastjson/1.1-unwrap/fastjson-1.1-unwrap-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

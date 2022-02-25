@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>QuickBuy_service_goods</module>
+        <module>QuickBuy_service_order</module>
     </modules>
 
     <properties>
