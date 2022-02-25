@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Carousel, Card, Col, Row} from 'antd';
+import { Card, Col, Row} from 'antd';
+import { Link } from 'react-router-dom';
+import { apigetProductbyCategory } from '../../request/api';
+import axios from 'axios';
 import './main.css';
 const {Meta} = Card;
 
@@ -56,18 +59,41 @@ const {Meta} = Card;
 
 // export default Content;
 
-
-export default function Content()  {
+function Content(props)  {
   const[products,setProducts]=useState([])
 
+
     useEffect(()=>{
-        fetch("http://192.168.1.3:9011/product")
-        .then(res=>res.json())
+      if (props.product_search.length == 0){
+
+        if (props.category_id == '0'){
+          axios.get(`http://localhost:9011/product`)
+          .then((result)=>{
+              setProducts(result.data.data);
+          }
+        )
+        } else {
+          axios.get(`http://localhost:9011/product/category?category_id=${parseInt(props.category_id)}`)
         .then((result)=>{
-            setProducts(result.data);
+            setProducts(result.data.data);
         }
       )
+
+        }
+
+        
+
+      } else {
+        axios.get(`http://localhost:9011/product/name?name=${props.product_search}`)
+        .then((result)=>{
+            setProducts(result.data.data);
+        }
+      )
+
+      }
+        
       },[])
+
 
       return (
         <div className="site-card-wrapper">
@@ -75,11 +101,14 @@ export default function Content()  {
       <Row gutter={[16, 24]}>
             {products.map(product=>(
               <Col className="gutter-row" span={4} key = {product.sku}>
-            <Card hoverable style={{ height: 400 }} bordered={false} key = {product.sku} cover={<img alt={product.name} src={product.image} />}>
+              <Link to={'/product/'+ product.sku } >
+            <Card hoverable  bordered={false} key = {product.sku} cover={<img alt={product.name} src={product.image}/>}>
             <Meta title={ product.name } />
              ${product.price/100}/{product.unit}
             </Card>
+            </Link>
             </Col>
+            
             ))}
     </Row>
    
@@ -88,6 +117,8 @@ export default function Content()  {
       )
 
 
-}
+};
+
+export default Content;
 
 

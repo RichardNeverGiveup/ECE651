@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/QuickBuy_service_goods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/QuickBuy_service_goods.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/controller/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/controller/BrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/controller/UserLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/controller/UserLoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/service/impl/BrandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/service/impl/BrandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/service/impl/UserLoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/service/impl/UserLoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Sider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Sider.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +31,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -51,6 +49,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.74367815" />
   </component>
   <component name="RunManager" selected="Application.GoodsApplication">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

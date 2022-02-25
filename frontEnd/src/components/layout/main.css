@@ -3,3 +3,7 @@
 .ant-card-meta-title {
     white-space: pre-line;
   }
+
+  .ant-layout-content{
+    background: white;
+  }

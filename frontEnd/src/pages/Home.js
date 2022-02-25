@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import NavHeader from '../components/layout/Header';
 import NavFooter from '../components/layout/Footer';
@@ -8,21 +8,35 @@ import { Layout } from 'antd';
 const { Header, Footer, Content,Sider } = Layout;
 
 
-class Home extends React.Component {
+function Home() {
 
-    render() {
+  const [category, setCategory] = useState('0');
+  const [searchparam, setSearchparam] = useState("");
+  const [key, setKey] = useState("");
+
+  const passCategoryID = (childdata) => {
+    setCategory(childdata);
+    setKey(`${childdata}_${searchparam}`);
+  }
+
+  const passSearchparam = (childdata) => {
+    setSearchparam(childdata);
+    setKey(`${category}_${childdata}`);
+  }
+
+
         return (
             <div>
               <Layout style={{minHeight: '100vh'}}>
                 <Header>
-                  <NavHeader></NavHeader>
+                  <NavHeader searchparam = {passSearchparam}/>
                 </Header>
                 <Layout>
                 <Sider>
-                <NavSider></NavSider>
+                <NavSider category_id = {passCategoryID}/>
                 </Sider>
                 <Content>
-                  <NavContent></NavContent>
+                  <NavContent category_id={category} product_search={searchparam} key={key}/>
                 </Content>
                 </Layout>
                 <Footer>
@@ -31,7 +45,7 @@ class Home extends React.Component {
               </Layout>
             </div>
         );
-    }
+    
 }
 
 export default Home;
