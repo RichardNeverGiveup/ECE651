@@ -1,0 +1,58 @@
+PUT http://localhost:9011/brand/1115
+
+<> 2022-02-25T094725.200.json
+
+###
+
+PUT http://localhost:9011/brand/{1115}
+
+###
+
+POST http://localhost:9011/brand
+
+<> 2022-02-25T094629.200.json
+
+###
+
+POST http://localhost:9011/brand
+
+###
+
+GET http://localhost:9012/log/search
+
+<> 2022-02-25T092847.200.json
+
+###
+
+PUT http://localhost:9012/log/1
+
+<> 2022-02-25T092812.200.json
+
+###
+
+PUT http://localhost:9012/log/{{1}}
+
+###
+
+PUT http://localhost:9012/log/{{id}}
+
+###
+
+PUT http://localhost:9012/log/{1}
+
+###
+
+POST http://localhost:9012/log
+
+<> 2022-02-25T092559.200.json
+
+###
+
+PUT http://localhost:9012/log/{{id}}
+
+###
+
+PUT http://localhost:9012/log/{{id}}
+
+###
+
