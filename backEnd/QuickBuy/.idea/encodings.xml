@@ -2,10 +2,20 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/QuickBuy_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_common_db/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/QuickBuy_eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_cart_api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_goods_api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/QuickBuy_service_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
