@@ -24,20 +24,20 @@ const menu = (
     </Menu>
 )
 
-export default function Header({navigation, route, searchparam})  {
+export default function Header({searchparam})  {
 
     const [ name, setName ] = useState()
     useEffect(() => {
-        //console.log("route", route);
-        //console.log('username', Cookies.get("user"))
         if(Cookies.get("user")) {
             setName(Cookies.get("user"))
         }
+        
     });
 
     const onSearch = (value) => {
         searchparam(value);
     }
+
 
     return (
         <div>
@@ -59,7 +59,7 @@ export default function Header({navigation, route, searchparam})  {
                            name && <span>Hello, {name}</span>
                         }
                     </Col>
-                    <Col span={6}>Orders</Col>
+                    <Col span={6}><Link to={'/order'}>Orders</Link></Col>
                     <Col span={4}> 
                     <Badge count={1}>
                     <Link to={'/cart' } >

@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.EurekaApplication" />
         <item itemvalue="Application.GoodsApplication" />
+        <item itemvalue="Application.EurekaApplication" />
         <item itemvalue="JUnit.UserLoginControllerTest" />
         <item itemvalue="JUnit.BrandControllerTests" />
       </list>

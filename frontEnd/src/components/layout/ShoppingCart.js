@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Table, Input, Button, Popconfirm, Form,Typography } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 import axios from 'axios';
-const { Text } = Typography;
+const { Text, Title } = Typography;
 
 
 
@@ -74,6 +74,9 @@ function ShoppingCart() {
 
     return (
         <div>
+        <Title>Shopping Cart </Title>
+
+
         <Table
           columns={columns}
           dataSource={data}
@@ -95,6 +98,9 @@ function ShoppingCart() {
                   <Table.Summary.Cell>
                     <Text strong type="danger">${(totalpayment).toFixed(2)}</Text>
                   </Table.Summary.Cell>
+                  <Table.Summary.Cell><Button type="primary" shape="round" size={'large'}>
+                Check Out
+              </Button></Table.Summary.Cell>
                 </Table.Summary.Row>
               </>
             );

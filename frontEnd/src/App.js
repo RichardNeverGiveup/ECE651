@@ -7,6 +7,9 @@ import Login from './pages/Login/Register'
 import Test from './pages/Test'
 import ProductPage from './pages/ProductPage'
 import ShoppingCartPage from './pages/ShoppingCartPage'
+import OrderPage from './pages/OrderPage'
+import SingleOrderPage from './pages/SingleOrderPage';
+
 
 class App extends React.Component {
 
@@ -19,6 +22,8 @@ class App extends React.Component {
             <Route path="/test" element={<Test/>}></Route>
             <Route path="/product/:product_id" element={<ProductPage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
+            <Route path="/order" element={<OrderPage/>}/>
+            <Route path="/orderById/:order_id" element={<SingleOrderPage/>}/>
         </Routes>
       </Router>
     );

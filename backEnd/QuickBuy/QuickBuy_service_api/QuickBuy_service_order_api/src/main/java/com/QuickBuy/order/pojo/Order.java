@@ -65,9 +65,18 @@ public class Order implements Serializable {
 		this.isDelete = isDelete;
 	}
 
+	public String getCreated() {
+		return created;
+	}
+
+	public void setCreated(String created) {
+		this.created = created;
+	}
+
 	private Integer totalMoney;//金额合计
 	private String username;//用户名称
 	private String orderStatus;//订单状态
+	private String created;//订单时间
 	private String isDelete;//是否删除
 
 }
