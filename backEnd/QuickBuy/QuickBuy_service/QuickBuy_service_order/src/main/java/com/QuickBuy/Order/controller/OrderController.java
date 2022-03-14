@@ -28,6 +28,17 @@ public class OrderController {
         return new Result(true, StatusCode.OK,"查询成功",orderList) ;
     }
 
+
+    /**
+     * search orders by username
+     * @return
+     */
+    @GetMapping("/user")
+    public Result findByUser(@RequestParam Map<String, Object> searchMap){
+        List<Order> orderList = orderService.findByUser(searchMap);
+        return new Result(true, StatusCode.OK,"查询成功",orderList) ;
+    }
+
     /***
      * 根据ID查询数据
      * @param id

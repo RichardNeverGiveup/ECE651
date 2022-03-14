@@ -13,6 +13,12 @@ public interface OrderService {
      */
     List<Order> findAll();
 
+    /***
+     * search by user
+     * @return
+     */
+    List<Order> findByUser(Map<String, Object> searchMap);
+
     /**
      * 根据ID查询
      * @param id

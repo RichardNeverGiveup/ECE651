@@ -28,6 +28,18 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
+     *Find by userid
+     */
+    @Override
+    public List<Order> findByUser(Map<String, Object> searchMap) {
+        Example example = new Example(Order.class);
+        Example.Criteria criteria = example.createCriteria();
+
+        criteria.andEqualTo("username", searchMap.get("username"));
+        return orderMapper.selectByExample(example);
+    }
+
+    /**
      * 根据ID查询
      * @param id
      * @return
