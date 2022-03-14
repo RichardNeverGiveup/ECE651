@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/LogControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/LogControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderItemTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/orderConfigTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/orderConfigTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/preferentialTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/preferentialTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +91,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.74367815" />
@@ -96,6 +101,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\10511\Desktop\University of Waterloo\Courses\Winter_2022\ECE651\project\backEnd\QuickBuy\QuickBuy_service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.QuickBuy" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.OrderApplication">
@@ -126,11 +134,11 @@
       </method>
     </configuration>
     <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.Order.OrderApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.OrderApplication" />
       <module name="QuickBuy_service_order" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.QuickBuy.Order.*" />
+          <option name="PATTERN" value="com.QuickBuy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -184,7 +192,7 @@
     </configuration>
     <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="QuickBuy_service_order" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.Order.OrderApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.OrderApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,7 +231,7 @@
       <workItem from="1646959453754" duration="595000" />
       <workItem from="1647021408225" duration="5488000" />
       <workItem from="1647029924514" duration="179000" />
-      <workItem from="1647281806405" duration="10058000" />
+      <workItem from="1647281806405" duration="12483000" />
     </task>
     <servers />
   </component>

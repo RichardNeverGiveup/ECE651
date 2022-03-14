@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class CartServiceImpl implements CartService{
     @Autowired
     private CartMapper cartMapper;
 
-    @Autowired
+    @Resource(type = ProductMapper.class)
     private ProductMapper productMapper;
 
     @Override

@@ -1,6 +1,6 @@
 package com.QuickBuy.service.order;
 
-import com.QuickBuy.Order.OrderApplication;
+import com.QuickBuy.OrderApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
