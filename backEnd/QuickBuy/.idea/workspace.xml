@@ -5,14 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/dao/CartMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_goods_api/src/main/java/com/QuickBuy/goods/feign/ProductFeign.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/cart/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/LogControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/LogControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/OrderItemTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/orderConfigTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/orderConfigTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/preferentialTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/test/java/com/QuickBuy/service/order/preferentialTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +72,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -106,7 +115,7 @@
       <recent name="com.QuickBuy" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderApplication">
+  <component name="RunManager" selected="Application.EurekaApplication">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.QuickBuy.eureka.EurekaApplication" />
       <module name="QuickBuy_eureka" />
@@ -248,5 +257,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
