@@ -36,6 +36,12 @@
             <artifactId>QuickBuy_service_goods_api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.ECE651_29</groupId>
+            <artifactId>QuickBuy_service_goods</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

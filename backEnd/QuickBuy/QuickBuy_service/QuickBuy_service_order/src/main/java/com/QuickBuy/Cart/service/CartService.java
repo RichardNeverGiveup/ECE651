@@ -11,13 +11,16 @@ public interface CartService {
     List<Cart> showCart(Map<String, Object> searchMap);
 
     //添加到购物车
-    void addCart(Cart cart);
+    void addCart(Integer num, String username, String sku);
 
-    //删除购物车
-    void deleteCart(Map<String, Object> searchMap);
+    //删除购物车(全部)
+    void deleteFullCart(Map<String, Object> searchMap);
+
+    //删除购物车(单独)
+    void deleteSingleCart(String username, String sku);
 
     //更新购物车
-    void updateCart(Cart cart, Map<String, Object> searchMap);
+    void updateCart(Integer num, String username, String sku);
 
     //结账
 //    void checkOut(String username);
