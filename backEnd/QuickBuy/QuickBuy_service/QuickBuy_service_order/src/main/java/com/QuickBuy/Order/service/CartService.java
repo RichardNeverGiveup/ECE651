@@ -1,6 +1,6 @@
-package com.QuickBuy.Cart.service;
+package com.QuickBuy.Order.service;
 
-import com.QuickBuy.cart.Cart;
+import com.QuickBuy.order.pojo.Cart;
 
 import java.util.List;
 import java.util.Map;

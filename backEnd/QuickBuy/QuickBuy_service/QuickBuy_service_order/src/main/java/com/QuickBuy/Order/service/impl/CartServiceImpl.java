@@ -1,10 +1,10 @@
-package com.QuickBuy.Cart.service.impl;
+package com.QuickBuy.Order.service.impl;
 
-import com.QuickBuy.Cart.dao.CartMapper;
-import com.QuickBuy.Cart.service.CartService;
-import com.QuickBuy.cart.Cart;
+import com.QuickBuy.Order.dao.CartMapper;
+import com.QuickBuy.Order.service.CartService;
+import com.QuickBuy.order.pojo.Cart;
+import com.QuickBuy.order.pojo.OrderItem;
 import com.QuickBuy.service.goods.dao.ProductMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -16,7 +16,7 @@ import java.util.Map;
 @Service
 public class CartServiceImpl implements CartService{
 
-    @Autowired
+    @Resource(type = CartMapper.class)
     private CartMapper cartMapper;
 
     @Resource(type = ProductMapper.class)
@@ -76,5 +76,21 @@ public class CartServiceImpl implements CartService{
         cartMapper.updateByPrimaryKey(cart);
     }
 
+/*    @Override
+    public void checkOut(String username) {
+        //查询所有该用户的购物车信息
+        Example example = new Example(Cart.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("username", username);
+
+        List<Cart> cartList = cartMapper.selectByExample(example);
+
+        //根据cartList的每一个实体cart封装进orderItem中
+        for(Cart cart : cartList){
+            OrderItem orderItem;
+
+        }
+    }
+*/
 
 }

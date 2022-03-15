@@ -1,10 +1,11 @@
-package com.QuickBuy.cart;
+package com.QuickBuy.order.pojo;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Table(name = "tb_cart")
-public class Cart {
+public class Cart implements Serializable {
 
     @Id
     private String cart_id;

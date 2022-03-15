@@ -1,7 +1,7 @@
-package com.QuickBuy.Cart.controller;
+package com.QuickBuy.Order.controller;
 
-import com.QuickBuy.Cart.service.CartService;
-import com.QuickBuy.cart.Cart;
+import com.QuickBuy.Order.service.CartService;
+import com.QuickBuy.order.pojo.Cart;
 import com.QuickBuy.common.pojo.Result;
 import com.QuickBuy.common.pojo.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +44,6 @@ public class CartController {
     @PutMapping("/update")
     public Result updateCart(@RequestParam("num") Integer num, @RequestParam("username") String username, @RequestParam("sku") String sku){
         cartService.updateCart(num, username, sku);
-        return new Result(true, StatusCode.OK, "Delete OK.");
+        return new Result(true, StatusCode.OK, "Update OK.");
     }
 }
