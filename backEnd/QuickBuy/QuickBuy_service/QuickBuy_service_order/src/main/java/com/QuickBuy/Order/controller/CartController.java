@@ -13,6 +13,7 @@ import java.util.Map;
 @RequestMapping("/cart")
 @RestController
 @CrossOrigin
+
 public class CartController {
 
     @Autowired
@@ -37,8 +38,8 @@ public class CartController {
     }
 
     @DeleteMapping("/deleteSingle")
-    public Result deleteSingleCart(@RequestParam("username") String username, @RequestParam("sku") String sku){
-        cartService.deleteSingleCart(username,sku);
+    public Result deleteSingleCart(@RequestParam Map<String, String> searchMap){
+        cartService.deleteSingleCart(searchMap.get("username"),searchMap.get("sku"));
         return new Result(true, StatusCode.OK, "Delete OK.");
     }
     @PutMapping("/update")

@@ -13,7 +13,18 @@ public class Cart implements Serializable {
     private String username;
     private String sku;
     private Integer num;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private Integer price;
+    private String image;
 
     public String getCart_id() {
         return cart_id;
@@ -53,5 +64,13 @@ public class Cart implements Serializable {
 
     public Integer getPrice() {
         return price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

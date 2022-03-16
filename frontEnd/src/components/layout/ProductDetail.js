@@ -30,8 +30,12 @@ function ProductDetail() {
       },[product])
 
       function addCart(e){
-        axios.post(`http://localhost:9012/cart/addCart?num=${document.getElementById('num').value}&username=${loginuser}&sku=${product_id}`).then(function (response) {
+        //Not a good practice!!! Probably better to do on duplicate update
+
+        axios.delete(`http://localhost:9012/cart/deleteSingle?username=${loginuser}&sku=${product_id}`).then(function (response) {
           if(response.data.flag === true) {
+            axios.post(`http://localhost:9012/cart/addCart?num=${document.getElementById('num').value}&username=${loginuser}&sku=${product_id}`).then(function (second_res) {
+          if(second_res.data.flag === true) {
             message.success('Added to cart!');
         
           } else {
@@ -40,6 +44,16 @@ function ProductDetail() {
         }, err => {
           console.log('err', err)
         })
+        
+          } else {
+            message.error('Try Again!');
+          }
+        }, err => {
+          console.log('err', err)
+        })
+
+
+        
       }
 
 

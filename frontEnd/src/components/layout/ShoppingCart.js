@@ -1,18 +1,39 @@
 import { Link } from 'react-router-dom';
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { Table, Input, Button, Popconfirm, Form,Typography } from 'antd';
+import { Table, Input, Button, Popconfirm, Form,Typography, message } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+
 const { Text, Title } = Typography;
 
 
 
-  
-  const data = [{"sku":"05004301","name":"Carrot","price":218,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/0/5/050043_1_.jpg","unit":"lb","create_time":null,"update_time":null,"spu_id":null,"category_id":2,"category_name":"Vegetables","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05005201","name":"English Cucumber","price":219,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/0/5/0500520111591000936_1.jpg","unit":"Each","create_time":null,"update_time":null,"spu_id":null,"category_id":2,"category_name":"Vegetables","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05012802","name":"Portobella","price":440,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/aa1fabd47a3f84eab5e6284c3811b7c1/0/5/050128_-_portobella.jpg","unit":"lb","create_time":null,"update_time":null,"spu_id":null,"category_id":2,"category_name":"Vegetables","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05024201","name":"Fresh Banana","price":200,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/0/5/050242-banana.jpg","unit":"lb","create_time":null,"update_time":null,"spu_id":null,"category_id":1,"category_name":"Fruits","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05029601","name":"Orange","price":200,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/5/0/50296-__03.jpg","unit":"lb","create_time":null,"update_time":null,"spu_id":null,"category_id":1,"category_name":"Fruits","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05031401","name":"Pomegranate","price":500,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/0/5/050314_.jpg","unit":"Each","create_time":null,"update_time":null,"spu_id":null,"category_id":1,"category_name":"Fruits","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05034601","name":"Gala Apple","price":300,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/5/0/50346_gala_apple.jpg","unit":"lb","create_time":null,"update_time":null,"spu_id":null,"category_id":1,"category_name":"Fruits","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05044501","name":"Tomato","price":386,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/5/0/50445_copy_1.jpg","unit":"Pack","create_time":null,"update_time":null,"spu_id":null,"category_id":2,"category_name":"Vegetables","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"},{"sku":"05051701","name":"Watermelon","price":769,"num":10,"image":"https://www.tntsupermarket.com/media/catalog/product/cache/3489f2ad89d637baa4f5c5309861a9de/m/i/mini-watermelon.jpg","unit":"Each","create_time":null,"update_time":null,"spu_id":null,"category_id":1,"category_name":"Fruits","brand_name":null,"spec":null,"sale_num":0,"comment_num":0,"status":"1"}]
-  
-
-
 function ShoppingCart() {
+
+  const [loginuser, setLoginUser] = useState("");
+
+  useEffect(() => {
+    if(Cookies.get("user")) {
+      setLoginUser(Cookies.get("user"))
+    }
+    
+},[loginuser]);
+
+
+
+  const[cart,setCarts]=useState([])
+
+  useEffect(()=>{
+    axios.get(`http://localhost:9012/cart/showCart?username=${loginuser}`)
+    .then((result)=>{
+      setCarts(result.data.data);
+    }
+  )
+  },[cart])
+
+
+
 
     const columns = [{
         title: 'Product',
@@ -62,13 +83,29 @@ function ShoppingCart() {
             dataIndex: 'operation',
             render: (_, record) => {
                 return (
-                    <Popconfirm title="Sure to delete?">
+                    <Popconfirm onConfirm={() => deleteSingleItem(record.sku)} title="Sure to delete?">
                   <a>Delete</a>
                 </Popconfirm>
                   );},
           },
        ];
 
+
+       function deleteSingleItem(sku) {
+        axios.delete(`http://localhost:9012/cart/deleteSingle?username=${loginuser}&sku=${sku}`).then(function (response) {
+          if(response.data.flag === true) {
+            message.success('Item removed!');
+        
+          } else {
+            message.error('Try Again!');
+          }
+        
+        }, err => {
+          console.log('err', err)
+        })
+       
+      }
+    
 
     
 
@@ -79,9 +116,10 @@ function ShoppingCart() {
 
         <Table
           columns={columns}
-          dataSource={data}
+          dataSource={cart}
           pagination={false}
           bordered
+          rowKey="sku" 
           summary={pageData => {
             let totalpayment = 0;
     

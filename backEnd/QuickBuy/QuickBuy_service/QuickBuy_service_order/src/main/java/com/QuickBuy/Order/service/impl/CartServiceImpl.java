@@ -5,6 +5,8 @@ import com.QuickBuy.Order.service.CartService;
 import com.QuickBuy.order.pojo.Cart;
 import com.QuickBuy.order.pojo.OrderItem;
 import com.QuickBuy.service.goods.dao.ProductMapper;
+import com.QuickBuy.Order.dao.OrderMapper;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -40,6 +42,8 @@ public class CartServiceImpl implements CartService{
         String cart_id = username+"_"+sku;
         //获取当前添加商品的价格
         int price = productMapper.selectByPrimaryKey(sku).getPrice();
+        String image = productMapper.selectByPrimaryKey(sku).getImage();
+        String name = productMapper.selectByPrimaryKey(sku).getName();
 
         //封装进cart实体类
         Cart cart = new Cart();
@@ -48,6 +52,8 @@ public class CartServiceImpl implements CartService{
         cart.setCart_id(cart_id);
         cart.setPrice(price);
         cart.setSku(sku);
+        cart.setImage(image);
+        cart.setName(name);
 
         cartMapper.insert(cart);
     }
