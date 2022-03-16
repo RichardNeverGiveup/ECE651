@@ -1,9 +1,20 @@
 import { useParams} from "react-router-dom";
 import React, { useEffect, useState } from 'react';
-import { Image, Row, Col, Space, Button,InputNumber} from 'antd';
+import { Image, Row, message, Space, Button,InputNumber} from 'antd';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+
 
 function ProductDetail() {
+
+  const [loginuser, setLoginUser] = useState("");
+
+  useEffect(() => {
+    if(Cookies.get("user")) {
+      setLoginUser(Cookies.get("user"))
+    }
+    
+},[loginuser]);
 
 
     const { product_id } = useParams();
@@ -17,6 +28,20 @@ function ProductDetail() {
         }
       )
       },[product])
+
+      function addCart(e){
+        axios.post(`http://localhost:9012/cart/addCart?num=${document.getElementById('num').value}&username=${loginuser}&sku=${product_id}`).then(function (response) {
+          if(response.data.flag === true) {
+            message.success('Added to cart!');
+        
+          } else {
+            message.error('Try Again!');
+          }
+        }, err => {
+          console.log('err', err)
+        })
+      }
+
 
 
     return (
@@ -35,9 +60,9 @@ function ProductDetail() {
       <div style={{ marginTop: 20 }}>
       <h1>${(product.price/100).toFixed(2)}/{product.unit}</h1>
       </div>
-      <InputNumber defaultValue={1} />
+      <InputNumber id="num" min={1} max={10} defaultValue={1}/>
       <div style={{ marginTop: 20 }}>
-      <Button type="primary">Add to shopping cart</Button>
+      <Button type="primary" onClick={addCart}>Add to shopping cart</Button>
       </div>
       </span>
       </Space>

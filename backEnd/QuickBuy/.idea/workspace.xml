@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/main/java/com/QuickBuy/service/goods/GoodsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/main/java/com/QuickBuy/service/goods/GoodsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/dao/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/dao/CartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/ProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/ProductDetail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -107,7 +100,7 @@
       <recent name="com.QuickBuy" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderApplication">
+  <component name="RunManager" selected="Application.OrderApplication">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.QuickBuy.eureka.EurekaApplication" />
       <module name="QuickBuy_eureka" />
@@ -200,6 +193,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OrderApplication" />
         <item itemvalue="JUnit.UserLoginControllerTest" />
         <item itemvalue="JUnit.BrandControllerTests" />
       </list>
@@ -250,5 +244,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QuickBuy$OrderApplication.ic" NAME="OrderApplication Coverage Results" MODIFIED="1647312783258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.QuickBuy.Order.*</FILTER>
+    </SUITE>
   </component>
 </project>
