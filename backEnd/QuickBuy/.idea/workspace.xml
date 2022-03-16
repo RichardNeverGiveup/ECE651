@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="">
+    <list default="true" id="c74e52d3-6754-46e7-a0ce-e38df704a3e1" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontEnd/src/components/layout/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/main/java/com/QuickBuy/service/goods/GoodsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/src/main/java/com/QuickBuy/service/goods/GoodsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_goods/target/classes/com/QuickBuy/service/goods/GoodsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/dao/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/dao/CartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Cart/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/Order/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order/src/main/java/com/QuickBuy/OrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/cart/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/QuickBuy_service_api/QuickBuy_service_order_api/src/main/java/com/QuickBuy/order/pojo/Cart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +23,38 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,11 +63,12 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -47,15 +83,31 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/QuickBuy_service/QuickBuy_service_order" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.74367815" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.run.dashboard.notification" value="false" />
   </component>
-  <component name="RunManager" selected="Application.OrderApplication">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10511\Desktop\University of Waterloo\Courses\Winter_2022\ECE651\project\backEnd\QuickBuy\QuickBuy_service" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.QuickBuy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OrderApplication">
     <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.QuickBuy.eureka.EurekaApplication" />
       <module name="QuickBuy_eureka" />
@@ -83,11 +135,11 @@
       </method>
     </configuration>
     <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.Order.OrderApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.QuickBuy.OrderApplication" />
       <module name="QuickBuy_service_order" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.QuickBuy.Order.*" />
+          <option name="PATTERN" value="com.QuickBuy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +191,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="QuickBuy_service_order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.QuickBuy.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.GoodsApplication" />
-        <item itemvalue="Application.EurekaApplication" />
         <item itemvalue="JUnit.UserLoginControllerTest" />
         <item itemvalue="JUnit.BrandControllerTests" />
       </list>
@@ -161,6 +217,23 @@
       <workItem from="1645145411264" duration="644000" />
       <workItem from="1645146461243" duration="198000" />
       <workItem from="1645146683105" duration="359000" />
+      <workItem from="1646669716944" duration="239000" />
+      <workItem from="1646670037231" duration="5367000" />
+      <workItem from="1646755900718" duration="3307000" />
+      <workItem from="1646759256921" duration="67000" />
+      <workItem from="1646759390159" duration="134000" />
+      <workItem from="1646759688538" duration="671000" />
+      <workItem from="1646874003703" duration="1237000" />
+      <workItem from="1646931835423" duration="9632000" />
+      <workItem from="1646957269111" duration="105000" />
+      <workItem from="1646957391034" duration="82000" />
+      <workItem from="1646957500798" duration="335000" />
+      <workItem from="1646957858333" duration="1033000" />
+      <workItem from="1646959453754" duration="595000" />
+      <workItem from="1647021408225" duration="5488000" />
+      <workItem from="1647029924514" duration="179000" />
+      <workItem from="1647281806405" duration="17391000" />
+      <workItem from="1647363768346" duration="4010000" />
     </task>
     <servers />
   </component>
@@ -177,6 +250,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
