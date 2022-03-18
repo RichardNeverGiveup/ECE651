@@ -1,8 +1,6 @@
 import React from 'react';
 import "./index.css"
 
-
-
 import { apiAddUser, apiLoginUser } from '../../request/api';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -15,6 +13,7 @@ import Cookies from 'js-cookie';
 export default function Login({Login}) {
 
   const { state } = useLocation();
+
   let navigate = useNavigate();
 
   const onFinish = (values) => {
@@ -83,9 +82,8 @@ export default function Login({Login}) {
 
   }
 
-
   return (
-    <div>
+    <div data-testid="Register-1">
           <div className="register">
             <Row>
               <Col flex="auto"></Col>
@@ -136,8 +134,8 @@ export default function Login({Login}) {
 
                       <Form.Item wrapperCol={{ offset: 4, span: 20 }}>
                         <Button type="primary" htmlType="submit" >
-                          <p className={state.status === 1 ? 'showSubmit' : 'hiddenSubmit'}>Submit</p>
-                          <p className={state.status === 0 ? 'showSubmit' : 'hiddenSubmit'}>Register</p>
+                          <p className = {state && state.status === 1 ? 'showSubmit' :  'hiddenSubmit'}> Submit </p> 
+                          <p className = {state && state.status === 0 ? 'showSubmit' :  'hiddenSubmit'}> Register </p>
                         </Button>
                       </Form.Item>
                     </Form>
@@ -147,9 +145,6 @@ export default function Login({Login}) {
               <Col flex="auto"></Col>
             </Row>
           </div>
-          {/* <div>
-            {!alertStatus && <Alert message="Error" type="error" showIcon /> }
-          </div> */}
     </div>
   )
 }

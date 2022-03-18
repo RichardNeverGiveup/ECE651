@@ -3,33 +3,31 @@ import { Row, Col, Input, Menu, Dropdown, Button, Badge, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 
-// import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
-
-const { Search } = Input;
-
-const menu = (
-    <Menu
-    >
-        <Menu.Item key="0">
-            <Button  type="primary" block>
-                <Link to="/login" state={{ status: 1 }}>Sign in</Link>
-            </Button>
-        </Menu.Item>
-        <Menu.Item key="1">
-            <Button type="link" block>
-                <Link to="/login" state={{ status: 0 }}>New customer? Start here.</Link>
-            </Button>
-        </Menu.Item>
-    </Menu>
-)
 
 export default function Header({navigation, route, searchparam})  {
 
+    const { Search } = Input;
+
+    const menu = (
+        <Menu
+        >
+            <Menu.Item key="0">
+                <Button  type="primary" block>
+                    <Link to="/login" state={{ status: 1 }}>Sign in</Link>
+                </Button>
+            </Menu.Item>
+            <Menu.Item key="1">
+                <Button type="link" block>
+                    <Link to="/login" state={{ status: 0 }}>New customer? Start here.</Link>
+                </Button>
+            </Menu.Item>
+        </Menu>
+    )
+
     const [ name, setName ] = useState()
+    
     useEffect(() => {
-        //console.log("route", route);
-        //console.log('username', Cookies.get("user"))
         if(Cookies.get("user")) {
             setName(Cookies.get("user"))
         }
@@ -40,7 +38,7 @@ export default function Header({navigation, route, searchparam})  {
     }
 
     return (
-        <div>
+        <div data-testid="Header-1">
             <Row>
             <Col flex="150px"><Link to={'/' } >WATERLOO</Link></Col>
             <Col flex={4}>
