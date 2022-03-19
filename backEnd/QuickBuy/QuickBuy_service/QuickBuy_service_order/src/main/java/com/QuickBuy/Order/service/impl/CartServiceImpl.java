@@ -24,6 +24,9 @@ public class CartServiceImpl implements CartService{
     @Resource(type = ProductMapper.class)
     private ProductMapper productMapper;
 
+    @Resource(type = OrderMapper.class)
+    private OrderMapper orderMapper;
+
     @Override
     public List<Cart> showCart(Map<String, Object> searchMap) {
 
@@ -82,7 +85,7 @@ public class CartServiceImpl implements CartService{
         cartMapper.updateByPrimaryKey(cart);
     }
 
-/*    @Override
+    @Override
     public void checkOut(String username) {
         //查询所有该用户的购物车信息
         Example example = new Example(Cart.class);
@@ -97,6 +100,5 @@ public class CartServiceImpl implements CartService{
 
         }
     }
-*/
 
 }

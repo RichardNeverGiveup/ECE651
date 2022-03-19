@@ -30,7 +30,7 @@ public interface OrderService {
      * 新增
      * @param order
      */
-    void add(Order order);
+    int add(Order order);
 
     /***
      * 修改

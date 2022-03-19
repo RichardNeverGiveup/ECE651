@@ -23,6 +23,6 @@ public interface CartService {
     void updateCart(Integer num, String username, String sku);
 
     //结账
-//    void checkOut(String username);
+    void checkOut(String username);
 
 }

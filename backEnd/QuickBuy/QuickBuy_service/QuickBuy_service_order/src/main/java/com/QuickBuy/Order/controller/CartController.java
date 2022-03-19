@@ -43,8 +43,8 @@ public class CartController {
         return new Result(true, StatusCode.OK, "Delete OK.");
     }
     @PutMapping("/update")
-    public Result updateCart(@RequestParam("num") Integer num, @RequestParam("username") String username, @RequestParam("sku") String sku){
-        cartService.updateCart(num, username, sku);
+    public Result updateCart(@RequestParam Map<String, String> searchMap){
+        cartService.updateCart(Integer.parseInt(searchMap.get("num")),searchMap.get("username"),searchMap.get("sku"));
         return new Result(true, StatusCode.OK, "Update OK.");
     }
 }

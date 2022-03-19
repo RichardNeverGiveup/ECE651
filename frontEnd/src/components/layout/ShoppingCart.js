@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useContext, useState, useEffect, useRef } from 'react';
-import { Table, Input, Button, Popconfirm, Form,Typography, message } from 'antd';
+import { Table, Input, Button, Popconfirm, InputNumber,Typography, message } from 'antd';
 import { FormInstance } from 'antd/lib/form';
 import axios from 'axios';
 import Cookies from 'js-cookie';
@@ -32,6 +32,19 @@ function ShoppingCart() {
   )
   },[cart])
 
+  function onChange(val, sku) {
+    axios.put(`http://localhost:9012/cart/update?num=${val}&username=${loginuser}&sku=${sku}`).then(function (second_res) {
+      if(second_res.data.flag === true) {
+        message.success('Updated cart!');
+    
+      } else {
+        message.error('Try Again!');
+      }
+    }, err => {
+      console.log('err', err)
+    })
+   
+  }
 
 
 
@@ -66,6 +79,12 @@ function ShoppingCart() {
         title: 'Number',
         dataIndex: 'num', 
         key: 'num',
+        render: (text, record) => {
+          return (
+            <div>
+            <InputNumber id="num" min={1} max={10} defaultValue={record.num} onChange={(val)=> onChange(val, record.sku)}/>
+            </div>
+         );},
        },
        {
         title: 'Total',
