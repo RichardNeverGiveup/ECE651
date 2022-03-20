@@ -5,7 +5,7 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div data-testid="Footer-1">
                 <Row justify="space-around">
                     <Col span={6}>Conditions of Use</Col>
                     <Col span={6}>Privacy Notice</Col>
