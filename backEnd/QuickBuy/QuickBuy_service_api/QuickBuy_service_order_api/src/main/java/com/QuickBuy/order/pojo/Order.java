@@ -1,5 +1,6 @@
 package com.QuickBuy.order.pojo;
 
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;

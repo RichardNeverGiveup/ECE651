@@ -47,4 +47,10 @@ public class CartController {
         cartService.updateCart(Integer.parseInt(searchMap.get("num")),searchMap.get("username"),searchMap.get("sku"));
         return new Result(true, StatusCode.OK, "Update OK.");
     }
+
+    @PostMapping("/checkout")
+    public Result checkoutCart(@RequestParam Map<String, String> searchMap){
+        cartService.checkOut(searchMap.get("username"),Integer.parseInt(searchMap.get("num")),Integer.parseInt(searchMap.get("money")));
+        return new Result(true, StatusCode.OK, "Update OK.");
+    }
 }

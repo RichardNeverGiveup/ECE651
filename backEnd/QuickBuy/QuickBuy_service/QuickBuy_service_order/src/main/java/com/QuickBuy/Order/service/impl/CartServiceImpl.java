@@ -1,8 +1,10 @@
 package com.QuickBuy.Order.service.impl;
 
 import com.QuickBuy.Order.dao.CartMapper;
+import com.QuickBuy.Order.dao.OrderItemMapper;
 import com.QuickBuy.Order.service.CartService;
 import com.QuickBuy.order.pojo.Cart;
+import com.QuickBuy.order.pojo.Order;
 import com.QuickBuy.order.pojo.OrderItem;
 import com.QuickBuy.service.goods.dao.ProductMapper;
 import com.QuickBuy.Order.dao.OrderMapper;
@@ -26,6 +28,9 @@ public class CartServiceImpl implements CartService{
 
     @Resource(type = OrderMapper.class)
     private OrderMapper orderMapper;
+
+    @Resource(type = OrderItemMapper.class)
+    private OrderItemMapper orderItemMapper;
 
     @Override
     public List<Cart> showCart(Map<String, Object> searchMap) {
@@ -86,7 +91,7 @@ public class CartServiceImpl implements CartService{
     }
 
     @Override
-    public void checkOut(String username) {
+    public void checkOut(String username, Integer num, Integer money) {
         //查询所有该用户的购物车信息
         Example example = new Example(Cart.class);
         Example.Criteria criteria = example.createCriteria();
@@ -94,11 +99,26 @@ public class CartServiceImpl implements CartService{
 
         List<Cart> cartList = cartMapper.selectByExample(example);
 
-        //根据cartList的每一个实体cart封装进orderItem中
-        for(Cart cart : cartList){
-            OrderItem orderItem;
+        Order order = new Order();
+        order.setUsername(username);
+        order.setTotalNum(num);
+        order.setTotalMoney(money);
+        orderMapper.insertOrder(order);
+        String orderId = order.getId();
 
+        OrderItem orderItem;
+        for(Cart cart : cartList){
+            orderItem = new OrderItem();
+            orderItem.setId(orderId+"_"+cart.getCart_id());
+            orderItem.setOrderId(orderId);
+            orderItem.setName(cart.getName());
+            orderItem.setSkuId(cart.getSku());
+            orderItem.setPrice(cart.getPrice());
+            orderItem.setNum(cart.getNum());
+            orderItemMapper.insert(orderItem);
+            cartMapper.delete(cart);
         }
+
     }
 
 }

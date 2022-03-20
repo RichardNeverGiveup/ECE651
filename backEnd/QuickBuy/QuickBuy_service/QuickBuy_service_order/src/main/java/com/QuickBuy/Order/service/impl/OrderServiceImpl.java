@@ -4,6 +4,7 @@ import com.QuickBuy.Order.dao.OrderMapper;
 import com.QuickBuy.Order.service.OrderService;
 import com.QuickBuy.order.pojo.Order;
 
+import org.apache.ibatis.annotations.Options;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
@@ -56,7 +57,7 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public int add(Order order){
-        return orderMapper.insert(order);
+       return orderMapper.insert(order);
     }
 
 
