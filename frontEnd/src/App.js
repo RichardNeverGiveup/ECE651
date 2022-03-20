@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Home from './pages/Home'
 import Login from './pages/Login/Register'
-import Test from './pages/Test'
 import ProductPage from './pages/ProductPage'
 import ShoppingCartPage from './pages/ShoppingCartPage'
 import OrderPage from './pages/OrderPage'
@@ -19,7 +18,6 @@ class App extends React.Component {
         <Routes>
             <Route path="/" exact element={<Home/>}></Route>
             <Route path="/login" element={<Login/>}></Route>
-            <Route path="/test" element={<Test/>}></Route>
             <Route path="/product/:product_id" element={<ProductPage/>}/>
             <Route path="/cart" element={<ShoppingCartPage/>}/>
             <Route path="/order" element={<OrderPage/>}/>
