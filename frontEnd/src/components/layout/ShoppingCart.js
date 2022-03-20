@@ -124,6 +124,20 @@ function ShoppingCart() {
         })
        
       }
+
+      function checkout(totalnum, totalpayment){
+        axios.post(`http://localhost:9012/cart/checkout?username=${loginuser}&num=${totalnum}&money=${totalpayment}`).then(function (response) {
+          if(response.data.flag === true) {
+            message.success('Checkout Successful!');
+        
+          } else {
+            message.error('Try Again!');
+          }
+        
+        }, err => {
+          console.log('err', err)
+        })
+      }
     
 
     
@@ -141,9 +155,11 @@ function ShoppingCart() {
           rowKey="sku" 
           summary={pageData => {
             let totalpayment = 0;
+            let totalnum = 0;
     
             pageData.forEach(({price, num}) => {
-                totalpayment += price * num/100;
+                totalpayment += price * num;
+                totalnum += num;
             });
     
             return (
@@ -153,11 +169,11 @@ function ShoppingCart() {
                 <Table.Summary.Cell></Table.Summary.Cell>
                   <Table.Summary.Cell>Total</Table.Summary.Cell>
                   <Table.Summary.Cell>
-                    <Text strong type="danger">${(totalpayment).toFixed(2)}</Text>
+                    <Text strong type="danger">${(totalpayment/100).toFixed(2)}</Text>
                   </Table.Summary.Cell>
-                  <Table.Summary.Cell><Button type="primary" shape="round" size={'large'}>
+                  <Table.Summary.Cell><Popconfirm onConfirm={() => checkout(totalnum, totalpayment)} title="Sure to checkout?"><Button type="primary" shape="round" size={'large'}>
                 Check Out
-              </Button></Table.Summary.Cell>
+              </Button></Popconfirm></Table.Summary.Cell>
                 </Table.Summary.Row>
               </>
             );

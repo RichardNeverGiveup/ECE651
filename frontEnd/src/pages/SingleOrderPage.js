@@ -4,7 +4,6 @@ import NavHeader from '../components/layout/Header';
 import NavFooter from '../components/layout/Footer';
 import NavContent from '../components/layout/SingleOrder';
 import { Layout } from 'antd';
-import { Link } from 'react-router-dom';
 
 const { Header, Footer, Content } = Layout;
 

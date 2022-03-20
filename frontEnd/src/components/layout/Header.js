@@ -61,7 +61,7 @@ export default function Header({searchparam})  {
                     </Col>
                     <Col span={6}><Link to={'/order'}>Orders</Link></Col>
                     <Col span={4}> 
-                    <Badge count={1}>
+                    <Badge>
                     <Link to={'/cart' } >
                         <Avatar shape="square" style={{ backgroundColor: '#87d068' }}  icon={<ShoppingCartOutlined />} /></Link>
                     </Badge>
