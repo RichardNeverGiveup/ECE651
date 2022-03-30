@@ -8,37 +8,52 @@ import Cookies from 'js-cookie';
 
 const { Search } = Input;
 
-const menu = (
-    <Menu
-    >
-        <Menu.Item key="0">
-            <Button  type="primary" block>
-                <Link to="/login" state={{ status: 1 }}>Sign in</Link>
-            </Button>
-        </Menu.Item>
-        <Menu.Item key="1">
-            <Button type="link" block>
-                <Link to="/login" state={{ status: 0 }}>New customer? Start here.</Link>
-            </Button>
-        </Menu.Item>
-    </Menu>
-)
-
 export default function Header({navigation, route, searchparam})  {
+    let [ name, setName ] = useState()
 
-    const [ name, setName ] = useState()
     useEffect(() => {
-        //console.log("route", route);
-        //console.log('username', Cookies.get("user"))
         if(Cookies.get("user")) {
             setName(Cookies.get("user"))
         }
     });
 
+    const signOut = () => {
+        setName("");
+        Cookies.remove("user");
+    }
+
+
     const onSearch = (value) => {
         searchparam(value);
     }
 
+    const menu_out = (
+        <Menu
+        >
+            <Menu.Item key="2">
+                <Button type="primary" block>
+                    <div onClick={signOut}>Sign out</div>
+                </Button>
+            </Menu.Item>
+        </Menu>
+    )
+
+    const menu = (
+        <Menu
+        >
+            <Menu.Item key="0">
+                <Button  type="primary" block>
+                    <Link to="/login" state={{ status: 1 }}>Sign in</Link>
+                </Button>
+            </Menu.Item>
+            <Menu.Item key="1">
+                <Button type="link" block>
+                    <Link to="/login" state={{ status: 0 }}>New customer? Start here.</Link>
+                </Button>
+            </Menu.Item>
+        </Menu>
+    )
+    
     return (
         <div>
             <Row>
@@ -56,7 +71,10 @@ export default function Header({navigation, route, searchparam})  {
                         </Dropdown>
                         }
                         {
-                           name && <span>Hello, {name}</span>
+                           name && 
+                           <Dropdown overlay={menu_out} placement="bottomLeft" arrow>
+                                <span>Hello, {name}</span>
+                          </Dropdown>
                         }
                     </Col>
                     <Col span={6}>Orders</Col>
