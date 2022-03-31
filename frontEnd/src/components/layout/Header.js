@@ -43,7 +43,7 @@ export default function Header({navigation, route, searchparam})  {
         <Menu
         >
             <Menu.Item key="0">
-                <Button  type="primary" block>
+                <Button id="login" type="primary" block>
                     <Link to="/login" state={{ status: 1 }}>Sign in</Link>
                 </Button>
             </Menu.Item>
@@ -68,7 +68,7 @@ export default function Header({navigation, route, searchparam})  {
                         {
                             !name && 
                         <Dropdown overlay={menu} placement="bottomLeft" arrow>
-                            <span>Hello, Sign in</span>
+                            <span id='sign-in'>Hello, Sign in</span>
                         </Dropdown>
                         }
                         {
@@ -78,7 +78,7 @@ export default function Header({navigation, route, searchparam})  {
                           </Dropdown>
                         }
                     </Col>
-                    <Col span={6}><Link to={'/order'}>Orders</Link></Col>
+                    <Col span={6}><Link id={"order"} to={'/order'}>Orders</Link></Col>
                     <Col span={4}> 
                     <Badge>
                     <Link to={'/cart' } >
