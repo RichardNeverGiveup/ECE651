@@ -4,10 +4,19 @@ import "./index.css"
 import { apiAddUser, apiLoginUser } from '../../request/api';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { Form, Input, Button, Tooltip, Space, message} from 'antd';
+import { Form, Input, Button, Tooltip, Space, message, Row, Col, Popover} from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
-import { Row, Col } from 'antd';
 import Cookies from 'js-cookie';
+
+const content = (
+  <div>
+    <p>Password must contain at least one digit [0-9].</p>
+    <p>Password must contain at least one lowercase Latin character [a-z].</p>
+    <p>Password must contain at least one uppercase Latin character [A-Z].</p>
+    <p>Password must contain at least one special character like ! @ # $ % ^ & *</p>
+    <p>Password must contain a length of at least 8 characters and a maximum of 20 characters.</p>
+  </div>
+);
 
 
 export default function Login({Login}) {
@@ -37,10 +46,13 @@ export default function Login({Login}) {
       const isValidUser = checkValidUser(username, password);
       console.log('isValidUser', isValidUser)
 
-      if(isValidUser) {
+      if (isValidUser){
+
+
         apiAddUser({username, password}).then((res) => {
+          console.log(res.data);
           if(res.data.flag === false) {
-            message.error('Create failed!');
+            message.error('Error: ' + res.data.message);
           } else {
             message.success('Success created!');
             Cookies.set("user", username);
@@ -50,7 +62,12 @@ export default function Login({Login}) {
           message.error('Error: failed created!');
           console.log('err', err)
         })
+
+      } else {
+        message.error('Error: Invalid Password!');
+
       }
+      
     }
   
   };
@@ -127,9 +144,9 @@ export default function Login({Login}) {
                         </Form.Item>
                       </Space>
                       <Space>
-                        <Tooltip className="notice" placement="bottomLeft" title="at least one digit, at least one lowercase Latin character, at least one uppercase Latin character, at least one special character, 8 - 20 characters">
-                          <QuestionCircleOutlined />
-                        </Tooltip>
+                      <Popover className = "notice" content={content} title="Secure Password requirements">
+                      <QuestionCircleOutlined />
+                      </Popover>
                      </Space>
 
                       <Form.Item wrapperCol={{ offset: 4, span: 20 }}>

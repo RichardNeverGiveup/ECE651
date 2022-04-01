@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Menu, Switch } from 'antd';
+import React, { useState } from 'react';
+import { Menu } from 'antd';
 
 function Sider({category_id}){
   const [current, setCurent] = useState('0');

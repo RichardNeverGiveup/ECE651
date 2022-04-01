@@ -1,6 +1,6 @@
 import {Link, useParams} from "react-router-dom";
 import React, { useEffect, useState } from 'react';
-import { Table, Input, Button, Popconfirm, Form,Typography } from 'antd';
+import { Table, Typography } from 'antd';
 import axios from 'axios';
 const { Text, Title } = Typography;
 
@@ -60,7 +60,7 @@ function SingleOrder() {
           setOrder(result.data.data);
         }
       )
-      },[order])
+      },[order,order_id])
 
 
       return (

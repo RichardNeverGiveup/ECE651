@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import React, { useContext, useState, useEffect, useRef } from 'react';
-import { Table, Input, Button, Popconfirm, InputNumber,Typography, message } from 'antd';
-import { FormInstance } from 'antd/lib/form';
+import React, { useState, useEffect } from 'react';
+import { Table,Button, Popconfirm, InputNumber,Typography, message } from 'antd';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -30,7 +29,7 @@ function ShoppingCart() {
       setCarts(result.data.data);
     }
   )
-  },[cart])
+  },[cart, loginuser])
 
   function onChange(val, sku) {
     axios.put(`http://localhost:9012/cart/update?num=${val}&username=${loginuser}&sku=${sku}`).then(function (second_res) {
@@ -56,7 +55,7 @@ function ShoppingCart() {
         render: (text, record) => {
            return (
             <div>
-            <img src={record.image} style={{height: '30%', width: '30%' }}/>
+            <img src={record.image} style={{height: '30%', width: '30%' }} alt=""/>
               <div>
                <div>{record.sku}</div>
                <Link to={'/product/'+ record.sku }>{record.name}</Link>

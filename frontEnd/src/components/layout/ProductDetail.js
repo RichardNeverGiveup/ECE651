@@ -27,7 +27,7 @@ function ProductDetail() {
             setProduct(result.data.data);
         }
       )
-      },[product])
+      })
 
       function addCart(e){
         //Not a good practice!!! Probably better to do on duplicate update

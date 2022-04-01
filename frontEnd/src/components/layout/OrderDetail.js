@@ -18,7 +18,7 @@ function OrderDetail(props)  {
       setOrders(result.data.data);
     }
   )
-  },[orders])
+  })
 
   const columns = [
     {

@@ -3,7 +3,6 @@ import { Row, Col, Input, Menu, Dropdown, Button, Badge, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 
-// import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 const { Search } = Input;
@@ -16,7 +15,7 @@ export default function Header({navigation, route, searchparam})  {
             setName(Cookies.get("user"))
         }
         
-    });
+    },[name]);
 
     const signOut = () => {
         setName("");
